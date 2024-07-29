@@ -1,0 +1,25 @@
+package wordup;
+
+import java.util.Scanner;
+
+class Main {
+    
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Name:");
+		String name = scan.next();
+		
+		System.out.println("Age:");
+		int Age = scan.nextInt();
+		
+		System.out.println("Senior Quote:");
+		String quote = scan.next();
+		quote += scan.nextLine();
+		 
+	
+		System.out.println("Thank you, " + name + ". You are " + Age);
+		System.out.println("Your Senior Quote is " + quote);
+	}
+}
