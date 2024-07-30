@@ -1,0 +1,19 @@
+//while conditions remain true when all conditions are true
+//do always runs block of code once
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String userName = "";
+
+        do {
+            System.out.print("Enter your name: ");
+            userName = scan.nextLine();
+        }while (userName.isBlank());
+
+        System.out.println("Thank you, welcome "+userName);
+    }
+}
