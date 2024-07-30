@@ -1,0 +1,48 @@
+Array:
+
+//arrays are used to store lots of values into a variable
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        String[] hotBar = new String[9];
+
+        hotBar[0] = ("Pickaxe");
+        hotBar[1] = ("Shovel");
+        hotBar[2] = ("Sword");
+        hotBar[3] = ("Apple");
+        hotBar[4] = ("Totem");
+        hotBar[5] = ("ShulkerBox");
+        hotBar[6] = ("Diamonds");
+        hotBar[7] = ("Pickaxe");
+        hotBar[8] = ("Cobblestone");
+
+        System.out.println("Select item 1-9: ");
+        int number = scan.nextInt();
+
+        switch(number) {
+            case 1: System.out.println("You've Selected " + (hotBar[0]));
+                break;
+            case 2: System.out.println("You've Selected " + (hotBar[1]));
+                break;
+            case 3: System.out.println("You've Selected " + (hotBar[2]));
+                break;
+            case 4: System.out.println("You've Selected " + (hotBar[3]));
+                break;
+            case 5: System.out.println("You've Selected " + (hotBar[4]));
+                break;
+            case 6: System.out.println("You've Selected " + (hotBar[5]));
+                break;
+            case 7: System.out.println("You've Selected " + (hotBar[6]));
+                break;
+            case 8: System.out.println("You've Selected " + (hotBar[7]) );
+                break;
+            case 9: System.out.println("You've Selected " + (hotBar[8]));
+                break;
+
+        }
+    }
+}
