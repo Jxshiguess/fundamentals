@@ -1,0 +1,23 @@
+Methods:
+
+//methods = a block of code that is executed whenever it is called upon
+
+public class Main {
+    public static void main(String[] args) {
+
+        String name = "Bro";
+        int age = 21;
+        hello(name,age);
+
+    }
+
+    static void hello(String title, int number) {
+        System.out.println("hello "+title);
+        System.out.println("you are " +number);
+    }
+
+
+}
+
+returning a method:
+
