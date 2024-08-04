@@ -34,3 +34,28 @@ public class Main {
         System.out.println("Happy new year!");
     }
 }
+
+for-each loops:
+
+//for-each loops is a traversing technique to iterate through an array collection
+//its easier with less steps, its more readable, and less flexible
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        //String[] animals = {"cat", "dog", "rat", "mouse", "moose"};
+        ArrayList<String> animals = new ArrayList<String>();
+
+        animals.add("cat");
+        animals.add("dog");
+        animals.add("rat");
+        animals.add("mouse");
+        animals.add("moose");
+
+        for(String i : animals) {
+            System.out.println(i);
+        }
+
+    }
+}
