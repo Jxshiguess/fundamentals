@@ -1,0 +1,49 @@
+Object oriented programming:
+
+main class-
+//object = an instance of a class that may contain attributes and methods
+//example: phone, desk, computer, coffee cup
+//constructing an instance of another class
+//instantiate multiple instances of classes
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar1 = new Car();
+        Car myCar2 = new Car();
+
+        System.out.println(myCar1.year);
+        System.out.println(myCar1.make);
+        System.out.println(myCar1.model);
+
+        myCar1.drive();
+        System.out.println();
+        System.out.println(myCar2.year);
+        System.out.println(myCar2.make);
+        System.out.println(myCar2.model);
+
+        myCar2.brake();
+    }
+}
+car class-
+public class Car {
+    //defining characteristics for car:
+    String make = "Ford";
+    String model = "Mustang";
+    int year = 2008;
+    String color = "yellow";
+    double price = 20000.00;
+
+    //methods and actions the car can do:
+    void drive() {
+        System.out.println("Driving");
+    }
+
+    void brake() {
+        System.out.println("braking");
+
+
+    }
+
+
+}
+
