@@ -1,0 +1,169 @@
+Object oriented programming:
+
+main class---
+//object = an instance of a class that may contain attributes and methods
+//example: phone, desk, computer, coffee cup
+//constructing an instance of another class
+//instantiate multiple instances of classes
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar1 = new Car();
+        Car myCar2 = new Car();
+
+        System.out.println(myCar1.year);
+        System.out.println(myCar1.make);
+        System.out.println(myCar1.model);
+
+        myCar1.drive();
+        System.out.println();
+        System.out.println(myCar2.year);
+        System.out.println(myCar2.make);
+        System.out.println(myCar2.model);
+
+        myCar2.brake();
+    }
+}
+car class---
+public class Car {
+    //defining characteristics for car:
+    String make = "Ford";
+    String model = "Mustang";
+    int year = 2008;
+    String color = "yellow";
+    double price = 20000.00;
+
+    //methods and actions the car can do:
+    void drive() {
+        System.out.println("Driving");
+    }
+
+    void brake() {
+        System.out.println("braking");
+    }
+}
+
+Constructors:
+main class---
+
+//with constructors, can construct different objects with different qualities from the same class
+
+public class Main {
+    public static void main(String[] args) {
+
+        Human human1 = new Human("Bobby", 50, 170);
+        Human human2 = new Human("Ricky", 43, 165);
+
+        human2.eat();
+        human1.drink();
+    }
+}
+human class---
+//In order to access an objects attributes from within its own class you have to
+//use .this
+
+public class Human {
+
+    String name;
+    int age;
+    double weight;
+
+    Human(String name,int age,double weight) {
+
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+
+    void eat() {
+        System.out.println(this.name+" is eating");
+    }
+    void drink() {
+        System.out.println(this.name+" is drinking");
+    }
+}
+
+variable scope:
+main class---
+//local =  declared inside a method
+//visible only to that method
+//global  = declared outside a method, but within a class
+//visible to all parts of a class
+
+
+
+public class Main {
+    public static void main (String[] args) {
+
+        diceRoller roller = new diceRoller();
+    }
+}
+diceRoller class---
+import java.util.Random;
+
+public class diceRoller {
+
+    Random random;
+    int number;
+
+    diceRoller() {
+        random = new Random();
+        roll();
+    }
+    void roll() {
+        number = random.nextInt(1,6);
+        System.out.println("You rolled a " +number);
+    }
+}
+
+Overloading a constructors:
+main class---
+//overloaded constructors = multiple constructors within a class with the same name
+//                          but have different parameters
+//                          name + parameters = signature
+
+public class Main {
+    public static void main (String[] args) {
+        pizza Pizza = new pizza("Thick crust");
+
+        System.out.println("Here are the ingredients for your pizza:");
+        System.out.println(Pizza.bread);
+        System.out.println(Pizza.sauce);
+        System.out.println(Pizza.cheese);
+        System.out.println(Pizza.topping);
+    }
+}
+pizza class---
+public class pizza {
+    String bread;
+    String sauce;
+    String cheese;
+    String topping;
+
+    pizza() {
+    }
+
+    pizza(String bread) {
+        this.bread = bread;
+    }
+
+    pizza(String bread, String sauce) {
+        this.bread = bread;
+        this.cheese = sauce;
+    }
+
+
+    pizza(String bread, String sauce, String cheese) {
+        this.bread = bread;
+        this.cheese = sauce;
+        this.sauce = cheese;
+
+    }
+
+    pizza(String bread, String sauce, String cheese, String topping) {
+        this.bread = bread;
+        this.cheese = sauce;
+        this.sauce = cheese;
+        this.topping = topping;
+    }
+}
