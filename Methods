@@ -82,3 +82,46 @@ public class Main {
     }
 
 }
+
+Overriding toString Method:
+main class---
+//toString() = special method that all objects inherit,
+//              that returns a string that "textually represents" an object.
+//              can be used both implicitly and explicitly
+
+public class Main {
+    public static void main (String[] args) {
+        car Car = new car();
+
+
+        System.out.println(Car.toString());
+        //System.out.println(Car);
+    }
+}
+car class---
+//Overriding toString method like this:
+//
+// public String toString() {
+//
+//        String myString = year+"\n"+make+"\n"+model+"\n"+color;
+//        return myString;
+//}
+//-----------------------------------------------------
+// or this:
+//public String toString() {
+//
+//        return year+"\n"+make+"\n"+model+"\n"+color;
+//}
+
+public class car {
+    String year = "2021";
+    String make = "Toyota";
+    String model = "Tacoma";
+    String color = "Grey";
+
+    public String toString() {
+
+        return year+"\n"+make+"\n"+model+"\n"+color;
+    }
+}
+
