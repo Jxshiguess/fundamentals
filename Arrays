@@ -46,3 +46,37 @@ public class Main {
         }
     }
 }
+
+Array of Objects:
+main class---
+public class Main {
+    public static void main (String[] args) {
+
+        //food[] refrigerator = new food[3];
+
+        food food1 = new food("Chicken");
+        food food2 = new food("Pizza");
+        food food3 = new food("Burger");
+
+        food[] refrigerator = {food1, food2, food3};
+
+        //refrigerator[0] = food1;
+        //refrigerator[1] = food2;
+        //refrigerator[2] = food3;
+
+        System.out.println(refrigerator[0].name);
+        System.out.println(refrigerator[1].name);
+        System.out.println(refrigerator[2].name);
+
+    }
+}
+food class---
+public class food {
+
+    String name;
+
+    food(String name) {
+        this.name = name;
+    }
+
+}
