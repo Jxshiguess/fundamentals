@@ -83,6 +83,43 @@ public class Main {
 
 }
 
+Overriding Methods:
+main class---
+//Method Overriding = Declaring a method in sub class,
+//                    which is already present in parent class
+//                    done so that a child class can give its own implementation
+
+public class Main {
+    public static void main (String[] args) {
+
+        Animal animal = new Animal();
+        animal.speak();
+
+        Dog dog = new Dog();
+
+        dog.speak();
+
+    }
+}
+Animal class---
+public class Animal {
+    void speak() {
+        System.out.println("The animal is speaking");
+    }
+}
+Dog class---
+//this method is overriding the one in Animal
+//if we deleted the override in this class,
+//it would use the one in animal when you call
+//the dog.speak
+public class Dog extends Animal {
+
+    @Override
+    void speak() {
+        System.out.println("The dog goes bark");
+    }
+}
+
 Overriding toString Method:
 main class---
 //toString() = special method that all objects inherit,
