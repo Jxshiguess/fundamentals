@@ -38,3 +38,48 @@ public class Friend {
 		numberOfFriends++;
 	}	
 }
+
+Super Keyword:
+main class---
+// super = Keyword refers to the superclass (parent) of an object
+//         very similar to the "this" keyword
+
+public class Main {
+    public static void main (String[] args) {
+        Hero hero1 = new Hero("Batman", 42, "$$$$");
+        Hero hero2 = new Hero("Superman", 45, "everything");
+
+        System.out.println(hero2.toString());
+    }
+}
+person class---
+public class Person {
+
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return this.name + "\n" + this.age + "\n";
+    }
+
+}
+hero class---
+
+public class Hero extends Person {
+
+    String power;
+
+    Hero(String name, int age, String power) {
+        super(name,age);
+        this.power = power;
+
+    }
+    public String toString() {
+        return super.toString() + this.power;
+    }
+}
