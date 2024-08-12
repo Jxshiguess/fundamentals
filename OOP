@@ -247,3 +247,32 @@ public class bicycle extends Vehicle {
     int wheels = 2;
     int pedals = 2;
 }
+
+Class and method Abstraction:
+main class---
+// abstract =  	abstract classes cannot be instantiated, but they can have a subclass
+//				abstract methods are declared without an implementation or "specifying a body"
+
+public class Main {
+    public static void main (String[] args) {
+
+        Car car = new Car();
+        //Vehicle vehicle = new Vehicle();
+
+        car.go();
+    }
+}
+Vehicle class---
+public abstract class Vehicle {
+
+    abstract void go();
+}
+Car class---
+public class Car extends Vehicle {
+
+    @Override
+    void go() {
+        System.out.println("The driver is driving the vehicle");
+    }
+
+}
