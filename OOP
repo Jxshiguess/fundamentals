@@ -282,3 +282,59 @@ Java access modifiers:
 //protected: visible to all classes in the same package or classes in other packages that are a subclass
 //default: visible to all classes in the same package
 //private: visible only in the same class
+
+Encapsulation:
+main class---
+// Encapsulation  = attributes of a class will be hidden or private,
+//                  Can be accessed only through methods(getters and setters)
+//                  You should make attributes private if you don't have a reason to make them public
+
+public class Main {
+    public static void main(String[] args) {
+
+        Car car = new Car("Toyota", "Corolla", 2005);
+
+        car.setYear(2015);
+
+        System.out.println(car.getMake());
+        System.out.println(car.getModel());
+        System.out.println(car.getYear());
+    }
+}
+Car class---
+public class Car {
+
+    private String make;
+    private String model;
+    private int year;
+
+    Car(String make, String model, int year){
+        this.setMake(make);
+        this.setModel(model);
+        this.setYear(year);
+    }
+//getters
+    public String getMake(){
+        return make;
+    }
+
+    public String getModel(){
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+//setters
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+}
