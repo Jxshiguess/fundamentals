@@ -35,6 +35,44 @@ public class Main {
     }
 }
 
+for loop examples----
+
+prompt: Create a program to count the the occurrence of each grade and output four numbers in a single line: the number of D, C, B, and A grades (in that order), separated by blank space characters.
+
+solution:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // start coding here
+        int n = scanner.nextInt();
+
+        int aCount = 0;
+        int bCount = 0;
+        int cCount = 0;
+        int dCount = 0;
+        
+        for(int i = 0; i<n; i++) {
+            String grades = scanner.next();
+            
+            if (grades.equals("A")) {
+                aCount++;
+            }
+            if (grades.equals("B")) {
+                bCount++;
+            }
+            if (grades.equals("C")) {
+                cCount++;
+            }
+            if (grades.equals("D")) {
+                dCount++;
+            }   
+        }
+    System.out.print(dCount + " " + cCount + " " + bCount + " " + aCount);   
+    }
+}
+
 for-each loops:
 
 //for-each loops is a traversing technique to iterate through an array collection
