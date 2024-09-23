@@ -73,6 +73,31 @@ class Main {
     }
 }
 
+prompt: reads two numbers from the input and finds the arithmetic average of all numbers from the interval from a-b, which have to be divisible by 3
+
+solution:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        double count = 0;
+        double sum = 0;
+
+        for(int i = a; i<=b; i++) {
+            if (i % 3 == 0) {
+                sum += i;
+                count++;
+            }
+        }
+        System.out.println(sum / count);
+    }
+}
+
 for-each loops:
 
 //for-each loops is a traversing technique to iterate through an array collection
