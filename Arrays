@@ -1,3 +1,36 @@
+Arrays and for loops:
+prompt: Sum of multiples of 3 in an array
+solution:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // create scanner instance to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // read the number of elements
+        int n = scanner.nextInt();
+
+        // create your array here
+        int[] array = new int[n];
+
+        // use a loop to read the array elements
+        for(int i=0; i<n; i++) {
+            array[i] = scanner.nextInt();
+        }
+        // use a loop to calculate the sum of elements that are multiples of 3
+        int multiplesOf3sum = 0;
+        for(int num : array) {
+            if(num % 3 ==0) {
+                multiplesOf3sum+=num;
+            }
+        }
+        System.out.println(multiplesOf3sum);
+        // close the scanner
+        scanner.close();
+    }
+}
+
 Array:
 
 //arrays are used to store lots of values into a variable
