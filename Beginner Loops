@@ -20,6 +20,28 @@ public class Main {
     }
 }
 
+while loop examples---
+
+prompt: Find the sum of all elements of a sequence, ending with the number 0. The number 0 itself is not included into the sequence and serves as a sign of cessation.
+
+solution:
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // start coding here
+        int num = 0;
+        int sum = 0;
+        
+        do {
+            num = scanner.nextInt();
+            sum+=num;
+        } while (num != 0);
+    System.out.println(sum);
+    }
+}
+
 for loops:
 
 //executes code a limited amount of times
