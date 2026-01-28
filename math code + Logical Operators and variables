@@ -83,4 +83,19 @@ Multiplication Table:
 	        System.out.println();
 	    }
 	}
+
+Finding Factors of a number calculator:
+
+	import java.util.Scanner;
 	
+	public static void main(String args[]) {
+	    Scanner scan = new Scanner(System.in);
+	    int num = scan.nextInt();
+	    int factors=0;
+	    for(int i=1; i<=num; i++) {
+	        int remainder = num%i;
+	        if(remainder == 0){
+	            System.out.println(i);
+	        }
+	    }
+	}
